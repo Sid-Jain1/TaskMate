@@ -4,22 +4,35 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="24dp"
+    android:background="?android:attr/windowBackground">
 
     <!-- Task Title Input -->
     <EditText
         android:id="@+id/taskTitleInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Task Title"
-        android:inputType="text"
-        android:maxLines="1"
+        android:hint="Enter task name"
+        android:inputType="textCapSentences"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp"
+        android:textSize="16sp"
         android:layout_marginBottom="16dp" />
+
+    <!-- Label for Spinner -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Task Type"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
 
     <!-- Task Kind Selector -->
     <Spinner
         android:id="@+id/taskKindSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp" />
+        android:background="@android:drawable/btn_dropdown"
+        android:padding="8dp" />
 </LinearLayout>

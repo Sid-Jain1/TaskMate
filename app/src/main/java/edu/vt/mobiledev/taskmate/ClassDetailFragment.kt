@@ -30,22 +30,23 @@ import java.io.File
 import java.util.Date
 
 class ClassDetailFragment : Fragment() {
-
+    //set up viewbinging
     private var _binding: FragmentClassDetailBinding? = null
     private val binding get() = checkNotNull(_binding) { "Binding is null" }
 
     private val args: ClassDetailFragmentArgs by navArgs()
+    //Setup ViewModel for the screen
     private val viewModel: ClassDetailViewModel by viewModels {
         ClassDetailViewModelFactory(args.classId)
     }
-
+    //Created Launcher for the image capture
     private val photoLauncher = registerForActivityResult(
         ActivityResultContracts.TakePicture()
     ) {
         binding.taskPhoto.tag = null
         viewModel.classItem.value?.let { updateView(it) }
     }
-
+    // Inflates layout and sets up toolbar menu
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -54,6 +55,7 @@ class ClassDetailFragment : Fragment() {
         _binding = FragmentClassDetailBinding.inflate(inflater, container, false)
 
         requireActivity().addMenuProvider(object : MenuProvider {
+            // Add menu to toolbar
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
                 menuInflater.inflate(R.menu.fragment_class_detail, menu)
                 val captureImageIntent = photoLauncher.contract.createIntent(requireContext(), Uri.EMPTY)
@@ -77,13 +79,14 @@ class ClassDetailFragment : Fragment() {
 
         return binding.root
     }
-
+    // Handles UI setup after layout is inflated
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.taskRecycler.layoutManager = LinearLayoutManager(context)
         getItemTouchHelper().attachToRecyclerView(binding.taskRecycler)
 
+        // Handles UI setup after layout is inflated
         binding.taskPhoto.setOnClickListener {
             viewModel.classItem.value?.let {
                 findNavController().navigate(
@@ -91,7 +94,7 @@ class ClassDetailFragment : Fragment() {
                 )
             }
         }
-
+        // Updates class name on text change
         binding.classTitleText.doOnTextChanged { text, _, _, _ ->
             viewModel.classItem.value?.let { currentClass ->
                 val updated = currentClass.copy(name = text.toString())
@@ -99,11 +102,12 @@ class ClassDetailFragment : Fragment() {
                 viewModel.updateClass(updated)
             }
         }
-
+        // Launch task creation dialog
         binding.addTaskButton.setOnClickListener {
             findNavController().navigate(ClassDetailFragmentDirections.addTaskDialog())
         }
 
+        // Handle result from task dialog
         setFragmentResultListener(TaskDialogFragment.REQUEST_KEY) { _, bundle ->
             val taskName = bundle.getString(TaskDialogFragment.TASK_NAME_KEY) ?: ""
             val taskKind = bundle.getSerializable(TaskDialogFragment.TASK_KIND_KEY) as? TaskKind ?: TaskKind.ASSIGNED
@@ -126,7 +130,7 @@ class ClassDetailFragment : Fragment() {
             }
         }
 
-
+        // Observe changes to the class item and update UI
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.classItem.collect { classItem ->
@@ -138,7 +142,7 @@ class ClassDetailFragment : Fragment() {
             }
         }
     }
-
+    // Updates the displayed fields with current class info
     private fun updateView(classItem: ClassItem) {
         if (binding.classTitleText.text.toString() != classItem.name) {
             binding.classTitleText.setText(classItem.name)
@@ -149,7 +153,7 @@ class ClassDetailFragment : Fragment() {
 
         updatePhoto(classItem)
     }
-
+    // Loads and displays the photo associated with a class
     private fun updatePhoto(classItem: ClassItem) {
         val expectedTag = classItem.id.toString()
         with(binding.taskPhoto) {
@@ -170,7 +174,7 @@ class ClassDetailFragment : Fragment() {
             }
         }
     }
-
+    // Opens camera and stores photo using FileProvider
     private fun takePhoto(classItem: ClassItem) {
         val photoFile = File(requireContext().applicationContext.filesDir, "IMG_${classItem.id}.JPG")
         val photoUri = FileProvider.getUriForFile(
@@ -181,7 +185,7 @@ class ClassDetailFragment : Fragment() {
         Log.i("PhotoURI", photoUri.toString())
         photoLauncher.launch(photoUri)
     }
-
+    // Shares class info as plain text
     private fun shareClass(classItem: ClassItem) {
         val shareText = buildString {
             appendLine(classItem.name)
@@ -205,14 +209,14 @@ class ClassDetailFragment : Fragment() {
         val chooser = Intent.createChooser(intent, "Share Class")
         startActivity(chooser)
     }
-
+    // Returns true if an Intent can be handled by the system
     private fun canResolveIntent(intent: Intent): Boolean {
         val packageManager: PackageManager = requireActivity().packageManager
         val resolvedActivity: ResolveInfo? =
             packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY)
         return resolvedActivity != null
     }
-
+    // Swipe-to-delete handler for RecyclerView tasks
     private fun getItemTouchHelper(): ItemTouchHelper {
         return ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
             override fun onMove(
@@ -234,7 +238,7 @@ class ClassDetailFragment : Fragment() {
             }
         })
     }
-
+    // Clean up binding to prevent memory leaks
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
