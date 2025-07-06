@@ -43,24 +43,6 @@ class ClassListFragment : Fragment() {
         binding.addClassButton.setOnClickListener {
             showAddClassDialog()
         }
-
-        // Add toolbar menu
-        requireActivity().addMenuProvider(object : MenuProvider {
-            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
-                menuInflater.inflate(R.menu.fragment_class_list, menu)
-            }
-
-            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                return when (menuItem.itemId) {
-                    R.id.new_class -> {
-                        showAddClassDialog()
-                        true
-                    }
-                    else -> false
-                }
-            }
-        }, viewLifecycleOwner)
-
         return binding.root
     }
 
