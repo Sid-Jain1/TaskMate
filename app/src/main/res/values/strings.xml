@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Class Detail / Assignment Fragment -->
+    <string name="class_info_label">Class Information</string>
+    <string name="class_icon_description">Class Icon</string>
+    <string name="class_title_label">Class Title</string>
+    <string name="class_code_label">Class Code</string>
+    <string name="total_assignments_label">Total Assignments</string>
+    <string name="assignment_list_label">Assignments</string>
+
+    <!-- Class List / Courses Fragment -->
+    <string name="class_info">Class Info</string>
+    <string name="class_icon_desc">Class Icon</string>
+    <string name="class_title">Class Title</string>
+    <string name="class_code">Class Code</string>
+    <string name="total_classes">Total Classes</string>
+    <string name="total_assignments">Total Assignments</string>
+
+    <!-- Shared UI -->
+    <string name="add_class">Add Class</string>
+    <string name="add_task">Add Task</string>
+    <string name="share">Share</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="task_photo">Assignment Photo</string>
+    <string name="task_icon">Task Icon</string>
+    <string name="status">Status</string>
+    <string name="app_name">ClassTracker</string>
+
+
+    <string name="task_dialog_title">Add Assignment</string>
+    <string name="task_dialog_positive">Add</string>
+    <string name="task_dialog_negative">Cancel</string>
+
+
+
+
+
+</resources>

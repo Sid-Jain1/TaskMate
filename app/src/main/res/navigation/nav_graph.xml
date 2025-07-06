@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/classListFragment">
+
+    <fragment
+        android:id="@+id/classListFragment"
+        android:name="edu.vt.mobiledev.taskmate.ClassListFragment"
+        tools:layout="@layout/fragment_class_list"
+        android:label="ClassListFragment">
+        <action
+            android:id="@+id/show_class_detail"
+            app:destination="@id/classDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/classDetailFragment"
+        android:name="edu.vt.mobiledev.taskmate.ClassDetailFragment"
+        tools:layout="@layout/fragment_class_detail"
+        android:label="ClassDetailFragment">
+        <argument
+            android:name="classId"
+            app:argType="java.util.UUID" />
+        <action
+            android:id="@+id/add_task_dialog"
+            app:destination="@id/taskDialogFragment" />
+        <action
+            android:id="@+id/show_photo_detail"
+            app:destination="@id/photoDialogFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/taskDialogFragment"
+        android:name="edu.vt.mobiledev.taskmate.TaskDialogFragment"
+        tools:layout="@layout/fragment_task_dialog"
+        android:label="TaskDialogFragment" />
+
+    <dialog
+        android:id="@+id/photoDialogFragment"
+        android:name="edu.vt.mobiledev.taskmate.PhotoDialogFragment"
+        tools:layout="@layout/fragment_photo_dialog"
+        android:label="PhotoDialogFragment">
+        <argument
+            android:name="photoFilename"
+            app:argType="string" />
+    </dialog>
+</navigation>
