@@ -9,11 +9,16 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.setFragmentResult
 import edu.vt.mobiledev.taskmate.databinding.FragmentTaskDialogBinding
 
+/**
+ * Dialog Fragment that allows the user to input a title for the task and then
+ * select a "kind of task" and then its passed to the fragment
+ */
 class TaskDialogFragment : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val binding = FragmentTaskDialogBinding.inflate(layoutInflater)
 
+        // Populate the Spinner with all TaskKind enum names
         val kindValues = TaskKind.entries.map { it.name }
         binding.taskKindSpinner.adapter = android.widget.ArrayAdapter(
             requireContext(),
@@ -23,6 +28,7 @@ class TaskDialogFragment : DialogFragment() {
             setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         }
 
+        // Handle the "Add" button press
         val positiveListener = DialogInterface.OnClickListener { _, _ ->
             val title = binding.taskTitleInput.text.toString()
             val kind = TaskKind.valueOf(binding.taskKindSpinner.selectedItem as String)
@@ -35,7 +41,7 @@ class TaskDialogFragment : DialogFragment() {
                 )
             )
         }
-
+        // Create and return the dialog
         return AlertDialog.Builder(requireContext())
             .setView(binding.root)
             .setTitle(R.string.task_dialog_title)
@@ -44,6 +50,9 @@ class TaskDialogFragment : DialogFragment() {
             .create()
     }
 
+    /**
+     * List of keys to be used by FragmentResult
+     */
     companion object {
         const val REQUEST_KEY = "edu.vt.mobiledev.taskmate.FragmentTaskDialog.Request"
         const val TASK_NAME_KEY = "edu.vt.mobiledev.taskmate.FragmentTaskDialog.TaskName"
