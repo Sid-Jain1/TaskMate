@@ -20,7 +20,7 @@ class ClassHolder(
 
         val completed = classItem.completedCount
         val total = classItem.totalCount
-        binding.classProgress.text = "$completed / $total tasks completed"
+        binding.classProgress.text = "$completed / $total  tasks completed"
 
         binding.root.setOnClickListener {
             onClassClicked(classItem.id)
