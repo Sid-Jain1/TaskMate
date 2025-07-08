@@ -23,9 +23,9 @@ An Android app to help students organize and manage their college classes and as
 
 ## 📸 Screenshots
 
-| Home Screen |   Add Class   |   Add Task   |
-|-------------|---------------|--------------|
-| ![Main](screenshots/Classes_Added.png) | ![Detail](screenshots/Add_Class.png) | ![Dialog](screenshots/Add_Task.png) |
+| Home Screen |   Add Class   |   Add Task   |  Inside of Class |   Share Class      |
+|-------------|---------------|--------------|-------------------|-------------------|
+| ![Main](screenshots/Classes_Added.png) | ![Detail](screenshots/Add_Class.png) | ![Dialog](screenshots/Add_Task.png) | ![Dialog](screenshots/Task_Added.png) |![Dialog](screenshots/Share.png)|
 
 ---
 
