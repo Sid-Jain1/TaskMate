@@ -6,10 +6,8 @@ TaskMate is a student productivity app built for Android that allows users to or
 
 ## 📱 Demo
 
-<video controls width="500">
-  <source src="screenshots/DemoTest.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Click here to download and watch the demo video](screenshots/DemoTest.mp4)
+
 
 
 ---
