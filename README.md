@@ -1,12 +1,12 @@
 # 🎓 ClassTracker
 
-An Android app to help students organize and manage their college classes and assignments, with features to track task completion and attach visual evidence.
+TaskMate is a student productivity app built for Android that allows users to organize and manage their academic workload. Whether it's keeping track of assignments, marking tasks as complete, or adding helpful task notes and photos, TaskMate can help students stay on top of there work
 
 ---
 
 ## 📱 Demo
 
-[![Watch the demo](https://img.youtube.com/vi/DEMO_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=DEMO_VIDEO_ID)
+[![Watch the demo](screenshots/DemoTest.mp4)
 
 ---
 
@@ -17,7 +17,6 @@ An Android app to help students organize and manage their college classes and as
 - Swipe to remove tasks
 - Attach and view task-related photos
 - Track class progress with progress bars
-- Dark mode support
 
 ---
 
@@ -53,9 +52,9 @@ An Android app to help students organize and manage their college classes and as
 
 ## 🐞 Known Issues
 
-- Photo capture may fail on some Android 11+ devices without storage permission
+- Tasks within class sometimes are unavalible till the class is refreshed or backed out of
+- Progress Bar doesnt work if tasks are swiped only if changed to completed
 - No due date sorting yet
-- Basic task validation only
 
 ---
 
@@ -69,11 +68,11 @@ An Android app to help students organize and manage their college classes and as
 
 ---
 
-## 👥 Team & Contact
+## 👥 Contact
 
 **Developer:** Siddharth Jain  
 📧 Email: siddharthjain@vt.edu  
-🔗 GitHub: [github.com/yourusername/ClassTracker](https://github.com/yourusername/ClassTracker)
+🔗 GitHub: [github.com/yourusername/ClassTracker](https://github.com/Sid-Jain1/TaskMate)
 
 ---
 
