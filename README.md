@@ -82,6 +82,8 @@ TaskMate is a student productivity app built for Android that allows users to or
 
 ## 💻 Getting Started
 
-Clone the repo:
+Clone the repo then run on Android 36 Emulator:
 ```bash
 git clone https://github.com/yourusername/TaskMate.git
+
+
