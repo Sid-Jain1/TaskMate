@@ -76,7 +76,7 @@ TaskMate is a student productivity app built for Android that allows users to or
 
 **Developer:** Siddharth Jain  
 📧 Email: siddharthjain@vt.edu  
-🔗 GitHub: [github.com/yourusername/ClassTracker](https://github.com/Sid-Jain1/TaskMate)
+🔗 GitHub: [github.com/Sid-Jain1/ClassTracker](https://github.com/Sid-Jain1/TaskMate)
 
 ---
 
