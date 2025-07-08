@@ -13,11 +13,14 @@ TaskMate is a student productivity app built for Android that allows users to or
 
 ## 🚀 Features
 
-- Add, update, and delete classes
-- Assign tasks to each class with status: Assigned, Completed, Late, Optional
-- Swipe to remove tasks
-- Attach and view task-related photos
-- Track class progress with progress bars
+- Add/View/Delete classes and assignments
+- Assignments status tracking
+- Swipe to delete
+- Share class via intent
+- Capture images of notes or assignment using camera
+- Dialog to add tasks
+- Room Database for storage
+
 
 ---
 
@@ -31,13 +34,13 @@ TaskMate is a student productivity app built for Android that allows users to or
 
 ## 🛠️ Technologies Used
 
-- Kotlin
-- Android Jetpack (ViewModel, LiveData, Room)
-- RecyclerView
-- Navigation Components
-- Material Design
-- ViewBinding
-- Photo Capture (Camera + FileProvider)
+- Interactions & Activities
+- View Models
+- Intents
+- Implicit Intents, Taking Pictures & RecyclerView 
+- Menus & Swipe Gestures
+- Databases, Navigation & Dialogs
+
 
 ---
 
@@ -81,4 +84,4 @@ TaskMate is a student productivity app built for Android that allows users to or
 
 Clone the repo:
 ```bash
-git clone https://github.com/yourusername/ClassTracker.git
+git clone https://github.com/yourusername/TaskMate.git
