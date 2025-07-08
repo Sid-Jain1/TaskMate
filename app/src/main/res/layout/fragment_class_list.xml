@@ -13,12 +13,11 @@
         android:padding="16dp"
         tools:context=".ClassListFragment">
 
-        <!-- Progress Summary -->
         <TextView
             android:id="@+id/summaryText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Completed: 0 / 0"
+            android:text="@string/completed_0_0"
             android:textStyle="bold"
             android:textSize="18sp"
             app:layout_constraintTop_toTopOf="parent"
@@ -40,13 +39,13 @@
             android:id="@+id/classStats"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Classes: 0, Assignments: 0"
+            android:text="@string/classes_0_assignments_0"
             android:textSize="16sp"
             app:layout_constraintTop_toBottomOf="@id/progressBar"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="8dp" />
 
-        <!-- Add Class Button (FAB style) -->
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addClassButton"
             android:layout_width="wrap_content"
@@ -59,7 +58,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- RecyclerView for Class List -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/classRecycler"
             android:layout_width="0dp"
@@ -71,19 +69,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             tools:listitem="@layout/list_item_class" />
 
-        <!-- Empty State Text -->
         <TextView
             android:id="@+id/noClassText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No classes added yet"
+            android:text="@string/no_classes_added_yet"
             android:visibility="gone"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- Empty State Add Button -->
         <Button
             android:id="@+id/noClassAddButton"
             android:layout_width="wrap_content"

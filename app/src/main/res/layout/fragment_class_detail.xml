@@ -15,7 +15,6 @@
         android:text="@string/class_info_label"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
 
-    <!-- Photo + Title/Updated -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -70,8 +69,6 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         tools:listitem="@layout/list_item_task" />
-
-    <!-- Add Task FAB -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addTaskButton"
         android:layout_width="wrap_content"

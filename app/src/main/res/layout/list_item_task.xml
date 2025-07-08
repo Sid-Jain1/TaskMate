@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Learned this ONLINE (USED THIS OVER REGULAR BUTTON/LOOKS BETTER)-->
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,7 +18,6 @@
         android:padding="12dp"
         android:gravity="center_vertical">
 
-        <!-- Status Icon -->
         <ImageView
             android:id="@+id/task_icon"
             android:layout_width="48dp"
@@ -25,30 +25,28 @@
             android:layout_marginEnd="12dp"
             android:src="@drawable/ic_assignment"
             android:contentDescription="@string/task_icon"
-            android:scaleType="centerInside"
             tools:ignore="ContentDescription" />
 
-        <!-- Title and Status -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
 
+            <!--Learned this ONLINE (USED THIS OVER REGULAR BUTTON/LOOKS BETTER)-->
             <TextView
                 android:id="@+id/task_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Task Title"
+                android:text="@string/task_title"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                android:maxLines="1"
                 android:ellipsize="end" />
 
             <TextView
                 android:id="@+id/task_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Status: Completed"
+                android:text="@string/status_completed"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                 android:textColor="@android:color/darker_gray"
                 tools:text="Due tomorrow" />

@@ -7,28 +7,27 @@
     android:padding="24dp"
     android:background="?android:attr/windowBackground">
 
-    <!-- Task Title Input -->
+    <!--Learned this ONLINE-->
     <EditText
         android:id="@+id/taskTitleInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter task name"
+        android:hint="@string/enter_task_name"
         android:inputType="textCapSentences"
         android:background="@android:drawable/edit_text"
         android:padding="12dp"
         android:textSize="16sp"
         android:layout_marginBottom="16dp" />
 
-    <!-- Label for Spinner -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Task Type"
+        android:text="@string/task_type"
         android:textSize="14sp"
         android:textStyle="bold"
         android:layout_marginBottom="4dp" />
 
-    <!-- Task Kind Selector -->
+    <!--Learned this ONLINE-->
     <Spinner
         android:id="@+id/taskKindSpinner"
         android:layout_width="match_parent"

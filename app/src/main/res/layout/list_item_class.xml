@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Learned this ONLINE (USED THIS OVER REGULAR BUTTON/LOOKS BETTER)-->
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -16,23 +17,23 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Class Name -->
+
         <TextView
             android:id="@+id/className"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Class Title"
+            android:text="@string/class_title"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@android:color/black"
             android:layout_marginBottom="6dp" />
 
-        <!-- Class Progress -->
+
         <TextView
             android:id="@+id/classProgress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="0 / 0 tasks completed"
+            android:text="@string/_0_0_tasks_completed"
             android:textSize="14sp"
             android:textColor="#666666" />
     </LinearLayout>
