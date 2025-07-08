@@ -8,7 +8,8 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.setFragmentResult
 import edu.vt.mobiledev.taskmate.databinding.FragmentTaskDialogBinding
-
+//Siddharth Jain
+//PID: siddharthjain
 /**
  * Dialog Fragment that allows the user to input a title for the task and then
  * select a "kind of task" and then its passed to the fragment

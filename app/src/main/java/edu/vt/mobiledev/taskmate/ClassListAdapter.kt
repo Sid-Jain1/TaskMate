@@ -5,7 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import edu.vt.mobiledev.taskmate.databinding.ListItemClassBinding
 import java.util.UUID
-
+//Siddharth Jain
+//PID: siddharthjain
 class ClassHolder(
     private val binding: ListItemClassBinding
 ) : RecyclerView.ViewHolder(binding.root) {

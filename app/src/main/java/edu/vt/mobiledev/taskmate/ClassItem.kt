@@ -5,7 +5,8 @@ import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import java.util.Date
 import java.util.UUID
-
+//Siddharth Jain
+//PID: siddharthjain
 //Class Information
 @Entity(tableName = "class_item")
 data class ClassItem(

@@ -2,8 +2,8 @@ package edu.vt.mobiledev.taskmate
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import edu.vt.mobiledev.taskmate.databinding.ActivityMainBinding
-
-//File Checked
+//Siddharth Jain
+//PID: siddharthjain
 class MainActivity : AppCompatActivity() {
     //Siddharth Jain
     //PID: siddharthjain
