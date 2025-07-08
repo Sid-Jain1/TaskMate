@@ -25,7 +25,7 @@ An Android app to help students organize and manage their college classes and as
 
 | Home Screen | Class Detail | Task Dialog |
 |-------------|---------------|--------------|
-| ![Main](screenshots/main.png) | ![Detail](screenshots/detail.png) | ![Dialog](screenshots/dialog.png) |
+| ![Main](screenshots/Classes_Added.png) | ![Detail](screenshots/detail.png) | ![Dialog](screenshots/dialog.png) |
 
 ---
 
