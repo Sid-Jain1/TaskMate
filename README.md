@@ -46,10 +46,10 @@ TaskMate is a student productivity app built for Android that allows users to or
 
 ## 🧪 Currently Working Features
 
-- Persistent storage of classes and tasks using Room
-- Task progress tracking with completion percentage
+- Storage of classes and tasks using Room database
+- Task progress tracking with completion percentage (Semi-Working)
 - Dialog-based task creation with dropdown for task type
-- Inline image attachment per class
+- Image Attachment per class
 - Swipe-to-delete task interactions
 
 ---
