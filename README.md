@@ -1,6 +1,6 @@
 # 🎓 TaskMate
 
-TaskMate is a student productivity app built for Android that allows users to organize and manage their academic workload. Whether it's keeping track of assignments, marking tasks as complete, or adding helpful task notes and photos, TaskMate can help students stay on top of there work
+TaskMate is a student productivity app built for Android that allows users to organize and manage their academic workload. Whether it's keeping track of assignments, marking tasks as complete, or adding helpful task notes and photos, TaskMate can help students stay on top of there work.
 
 ---
 
